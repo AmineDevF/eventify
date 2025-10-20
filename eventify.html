@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Journée Portes Ouvertes 2025</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #e8e8e8;
+        }
+        
+        /* Header simple mais mal aligné */
+        header {
+            background-color: #2c5aa0;
+            color: white;
+            padding: 30px 20px;
+            text-align: center;
+        }
+        
+        h1 {
+            margin: 0;
+            font-size: 42px;
+            font-weight: normal;
+        }
+        
+        .subtitle {
+            font-size: 18px;
+            margin-top: 10px;
+            color: #ffd700;
+        }
+        
+        /* Navigation basique */
+        nav {
+            background-color: #4a7ac2;
+            padding: 0;
+        }
+        
+        nav a {
+            display: inline-block;
+            color: white;
+            text-decoration: none;
+            padding: 18px 25px;
+            font-size: 16px;
+        }
+        
+        nav a:hover {
+            background-color: #2c5aa0;
+        }
+        
+        /* Container avec largeur fixe */
+        .container {
+            width: 1000px;
+            margin: 20px auto;
+            background-color: white;
+            padding: 30px;
+            min-height: 500px;
+        }
+        
+        .page {
+            display: none;
+        }
+        
+        .page.active {
+            display: block;
+        }
+        
+        h2 {
+            color: #2c5aa0;
+            font-size: 32px;
+            border-bottom: 3px solid #4a7ac2;
+            padding-bottom: 10px;
+            margin-bottom: 25px;
+        }
+        
+        h3 {
+            color: #333;
+            font-size: 22px;
+            margin-top: 20px;
+        }
+        
+        p {
+            line-height: 1.5;
+            color: #555;
+            font-size: 15px;
+        }
+        
+        /* Cards avec float */
+        .card-container {
+            margin: 30px 0;
+        }
+        
+        .card {
+            float: left;
+            width: 280px;
+            margin: 15px;
+            background-color: #f5f5f5;
+            border: 2px solid #ddd;
+            padding: 20px;
+            box-shadow: 2px 2px 8px rgba(0,0,0,0.1);
+        }
+        
+        .card img {
+            width: 100%;
+            height: 180px;
+            background-color: #ccc;
+            margin-bottom: 15px;
+        }
+        
+        .card h3 {
+            color: #2c5aa0;
+            font-size: 20px;
+            margin-top: 0;
+        }
+        
+        /* Boutons basiques */
+        .btn {
+            background-color: #4a7ac2;
+            color: white;
+            padding: 12px 25px;
+            border: none;
+            cursor: pointer;
+            font-size: 15px;
+            margin-top: 10px;
+        }
+        
+        .btn:hover {
+            background-color: #2c5aa0;
+        }
+        
+        /* Timeline simple */
+        .timeline-item {
+            background-color: #f9f9f9;
+            border-left: 5px solid #4a7ac2;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        
+        .time {
+            color: #2c5aa0;
+            font-weight: bold;
+            font-size: 18px;
+        }
+        
+        /* Tableau basique */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 25px 0;
+        }
+        
+        th {
+            background-color: #4a7ac2;
+            color: white;
+            padding: 12px;
+            text-align: left;
+        }
+        
+        td {
+            border: 1px solid #ddd;
+            padding: 10px;
+        }
+        
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        
+        /* Formulaire simple */
+        .form-group {
+            margin: 20px 0;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #333;
+            font-weight: bold;
+        }
+        
+        input, textarea, select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            font-size: 14px;
+            font-family: Arial, sans-serif;
+        }
+        
+        textarea {
+            resize: vertical;
+        }
+        
+        /* Info box */
+        .info-box {
+            background-color: #e3f2fd;
+            border: 2px solid #2196f3;
+            padding: 20px;
+            margin: 25px 0;
+        }
+        
+        .warning-box {
+            background-color: #fff3cd;
+            border: 2px solid #ffc107;
+            padding: 20px;
+            margin: 25px 0;
+        }
+        
+        /* Contact boxes */
+        .contact-box {
+            float: left;
+            width: 220px;
+            background-color: #f5f5f5;
+            border: 2px solid #ddd;
+            padding: 20px;
+            margin: 15px;
+        }
+        
+        .contact-box h3 {
+            color: #2c5aa0;
+            margin-top: 0;
+            border-bottom: 2px solid #4a7ac2;
+            padding-bottom: 8px;
+        }
+        
+        /* Footer basique */
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 30px;
+            text-align: center;
+            margin-top: 50px;
+        }
+        
+        footer p {
+            color: #ccc;
+            margin: 10px 0;
+        }
+        
+        /* Clearfix */
+        .clearfix::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+        
+        /* Liste basique */
+        ul {
+            line-height: 1.8;
+        }
+        
+        ul li {
+            margin: 8px 0;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Journée Portes Ouvertes 2025</h1>
+        <p class="subtitle">Lycée Excellence - Samedi 15 Mars 2025 | 9h00 - 18h00</p>
+    </header>
+    
+    <nav>
+        <a href="#" onclick="showPage('accueil')">Accueil</a>
+        <a href="#" onclick="showPage('programme')">Programme</a>
+        <a href="#" onclick="showPage('activites')">Activités</a>
+        <a href="#" onclick="showPage('inscription')">Inscription</a>
+        <a href="#" onclick="showPage('contact')">Contact</a>
+    </nav>
+    
+    <div class="container">
+        <!-- PAGE 1: ACCUEIL -->
+        <div id="accueil" class="page active">
+            <h2>Bienvenue à notre journée portes ouvertes</h2>
+            
+            <div class="info-box">
+                <h3>Une journée pour découvrir notre établissement</h3>
+                <p>Nous sommes heureux de vous accueillir pour cette journée spéciale. Venez découvrir nos installations, rencontrer nos enseignants et participer à de nombreuses activités.</p>
+            </div>
+            
+            <p>Cette journée est l'occasion idéale pour :</p>
+            <ul>
+                <li>Visiter nos locaux et nos équipements modernes</li>
+                <li>Échanger avec nos professeurs et notre équipe pédagogique</li>
+                <li>Participer à des ateliers pratiques dans différentes disciplines</li>
+                <li>Découvrir nos options et nos parcours éducatifs</li>
+                <li>Obtenir des informations sur les modalités d'inscription</li>
+            </ul>
+            
+            <div class="card-container clearfix">
+                <div class="card">
+                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='280' height='180'%3E%3Crect fill='%234a7ac2' width='280' height='180'/%3E%3Ctext x='140' y='95' text-anchor='middle' fill='white' font-size='24'%3ESciences%3C/text%3E%3C/svg%3E">
+                    <h3>Ateliers Scientifiques</h3>
+                    <p>Découvrez nos laboratoires équipés et participez à des expériences fascinantes en physique, chimie et biologie.</p>
+                    <button class="btn">En savoir plus</button>
+                </div>
+                
+                <div class="card">
+                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='280' height='180'%3E%3Crect fill='%234a7ac2' width='280' height='180'/%3E%3Ctext x='140' y='95' text-anchor='middle' fill='white' font-size='24'%3EArts%3C/text%3E%3C/svg%3E">
+                    <h3>Arts et Culture</h3>
+                    <p>Explorez notre espace artistique et découvrez les créations de nos élèves en peinture, sculpture et arts numériques.</p>
+                    <button class="btn">En savoir plus</button>
+                </div>
+                
+                <div class="card">
+                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='280' height='180'%3E%3Crect fill='%234a7ac2' width='280' height='180'/%3E%3Ctext x='140' y='95' text-anchor='middle' fill='white' font-size='24'%3ESports%3C/text%3E%3C/svg%3E">
+                    <h3>Installations Sportives</h3>
+                    <p>Testez notre complexe sportif avec gymnase, terrains extérieurs et mur d'escalade. Tournois organisés toute la journée.</p>
+                    <button class="btn">En savoir plus</button>
+                </div>
+            </div>
+            
+            <div class="warning-box">
+                <strong>Information importante :</strong> L'inscription est obligatoire pour participer aux ateliers. Les places sont limitées, inscrivez-vous dès maintenant !
+            </div>
+        </div>
+        
+        <!-- PAGE 2: PROGRAMME -->
+        <div id="programme" class="page">
+            <h2>Programme de la journée</h2>
+            
+            <p>Découvrez le planning détaillé de cette journée spéciale. Toutes les activités sont gratuites et ouvertes à tous.</p>
+            
+            <div class="timeline-item">
+                <span class="time">09:00 - 09:30</span>
+                <h3>Accueil et cérémonie d'ouverture</h3>
+                <p>Mot de bienvenue du directeur dans l'amphithéâtre principal. Présentation générale de l'établissement et du déroulement de la journée.</p>
+            </div>
+            
+            <div class="timeline-item">
+                <span class="time">09:30 - 11:00</span>
+                <h3>Ateliers scientifiques - Session 1</h3>
+                <p>Première session d'ateliers pratiques en sciences. Expériences de chimie, observations au microscope et démonstrations physiques. Inscription sur place.</p>
+            </div>
+            
+            <div class="timeline-item">
+                <span class="time">11:00 - 12:30</span>
+                <h3>Démonstrations artistiques et musicales</h3>
+                <p>Concert de l'orchestre de l'école, exposition des travaux d'élèves, démonstrations de peinture en direct. Visite libre des salles d'art.</p>
+            </div>
+            
+            <div class="timeline-item">
+                <span class="time">12:30 - 14:00</span>
+                <h3>Pause déjeuner</h3>
+                <p>Buffet gratuit préparé par les élèves de la section restauration. Spécialités variées et produits locaux. Cafétéria ouverte.</p>
+            </div>
+            
+            <div class="timeline-item">
+                <span class="time">14:00 - 16:00</span>
+                <h3>Activités sportives et tournois</h3>
+                <p>Tournois de basketball et football. Initiation à l'escalade. Démonstrations de gymnastique par nos élèves. Équipements fournis.</p>
+            </div>
+            
+            <div class="timeline-item">
+                <span class="time">16:00 - 17:30</span>
+                <h3>Technologies et innovation</h3>
+                <p>Découverte de nos équipements informatiques. Ateliers de programmation et robotique. Démonstrations d'impression 3D et réalité virtuelle.</p>
+            </div>
+            
+            <div class="timeline-item">
+                <span class="time">17:30 - 18:00</span>
+                <h3>Clôture et questions-réponses</h3>
+                <p>Session de questions avec l'équipe pédagogique. Informations sur les inscriptions pour l'année prochaine. Tombola avec de nombreux lots à gagner.</p>
+            </div>
+        </div>
+        
+        <!-- PAGE 3: ACTIVITÉS -->
+        <div id="activites" class="page">
+            <h2>Nos activités</h2>
+            
+            <p>Plus de 25 activités différentes vous attendent tout au long de la journée. Voici un aperçu de ce qui vous est proposé :</p>
+            
+            <h3>Sciences et Technologie</h3>
+            <table>
+                <tr>
+                    <th>Activité</th>
+                    <th>Description</th>
+                    <th>Lieu</th>
+                    <th>Durée</th>
+                </tr>
+                <tr>
+                    <td>Expériences de chimie</td>
+                    <td>Réactions chimiques spectaculaires et sécurisées</td>
+                    <td>Laboratoire A</td>
+                    <td>45 min</td>
+                </tr>
+                <tr>
+                    <td>Observation microscopique</td>
+                    <td>Découverte du monde microscopique</td>
+                    <td>Laboratoire B</td>
+                    <td>30 min</td>
+                </tr>
+                <tr>
+                    <td>Programmation Python</td>
+                    <td>Initiation au code informatique</td>
+                    <td>Salle info 1</td>
+                    <td>60 min</td>
+                </tr>
+                <tr>
+                    <td>Robotique</td>
+                    <td>Programmation et pilotage de robots</td>
+                    <td>Salle info 2</td>
+                    <td>45 min</td>
+                </tr>
+            </table>
+            
+            <h3>Arts et Culture</h3>
+            <table>
+                <tr>
+                    <th>Activité</th>
+                    <th>Description</th>
+                    <th>Lieu</th>
+                    <th>Durée</th>
+                </tr>
+                <tr>
+                    <td>Atelier peinture</td>
+                    <td>Techniques acrylique et aquarelle</td>
+                    <td>Salle d'arts</td>
+                    <td>60 min</td>
+                </tr>
+                <tr>
+                    <td>Sculpture sur argile</td>
+                    <td>Création de petites sculptures</td>
+                    <td>Atelier 3D</td>
+                    <td>90 min</td>
+                </tr>
+                <tr>
+                    <td>Photographie numérique</td>
+                    <td>Techniques de base et retouche</td>
+                    <td>Studio photo</td>
+                    <td>45 min</td>
+                </tr>
+                <tr>
+                    <td>Musique</td>
+                    <td>Initiation aux instruments</td>
+                    <td>Salle de musique</td>
+                    <td>40 min</td>
+                </tr>
+            </table>
+            
+            <h3>Sports et Bien-être</h3>
+            <table>
+                <tr>
+                    <th>Activité</th>
+                    <th>Description</th>
+                    <th>Lieu</th>
+                    <th>Durée</th>
+                </tr>
+                <tr>
+                    <td>Basketball</td>
+                    <td>Tournoi et entrainement</td>
+                    <td>Gymnase</td>
+                    <td>90 min</td>
+                </tr>
+                <tr>
+                    <td>Football</td>
+                    <td>Matchs amicaux</td>
+                    <td>Terrain extérieur</td>
+                    <td>90 min</td>
+                </tr>
+                <tr>
+                    <td>Escalade</td>
+                    <td>Initiation et parcours</td>
+                    <td>Mur d'escalade</td>
+                    <td>30 min</td>
+                </tr>
+                <tr>
+                    <td>Yoga</td>
+                    <td>Séance de relaxation</td>
+                    <td>Salle polyvalente</td>
+                    <td>45 min</td>
+                </tr>
+            </table>
+            
+            <div class="info-box">
+                <strong>Important :</strong> Les ateliers sont limités en nombre de participants. Pensez à vous inscrire tôt dans la journée pour les activités qui vous intéressent.
+            </div>
+        </div>
+        
+        <!-- PAGE 4: INSCRIPTION -->
+        <div id="inscription" class="page">
+            <h2>Inscription</h2>
+            
+            <p>Inscrivez-vous dès maintenant pour garantir votre place à notre journée portes ouvertes. L'inscription est gratuite et obligatoire.</p>
+            
+            <div class="warning-box">
+                <strong>Attention :</strong> Les places sont limitées pour certaines activités. Nous vous conseillons de vous inscrire rapidement.
+            </div>
+            
+            <form>
+                <div class="form-group">
+                    <label>Nom complet *</label>
+                    <input type="text" placeholder="Votre nom et prénom">
+                </div>
+                
+                <div class="form-group">
+                    <label>Adresse email *</label>
+                    <input type="email" placeholder="votre.email@exemple.com">
+                </div>
+                
+                <div class="form-group">
+                    <label>Numéro de téléphone *</label>
+                    <input type="tel" placeholder="06 12 34 56 78">
+                </div>
+                
+                <div class="form-group">
+                    <label>Tranche d'âge *</label>
+                    <select>
+                        <option value="">Sélectionnez votre âge</option>
+                        <option>Moins de 12 ans</option>
+                        <option>12-14 ans</option>
+                        <option>15-17 ans</option>
+                        <option>18 ans et plus</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label>Activités souhaitées (maximum 3)</label>
+                    <textarea rows="4" placeholder="Indiquez les activités qui vous intéressent..."></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label>Nombre de personnes accompagnantes</label>
+                    <input type="number" value="0" min="0" max="5">
+                </div>
+                
+                <div class="form-group">
+                    <label>Commentaires ou questions</label>
+                    <textarea rows="5" placeholder="Des questions particulières ? Des besoins spécifiques ?"></textarea>
+                </div>
+                
+                <button type="submit" class="btn" style="font-size: 16px; padding: 15px 30px;">Valider mon inscription</button>
+            </form>
+            
+            <div class="info-box" style="margin-top: 30px;">
+                <p><strong>Confirmation :</strong> Vous recevrez un email de confirmation dans les 24 heures avec tous les détails pratiques.</p>
+                <p><strong>Contact :</strong> Pour toute question, contactez-nous au 01 23 45 67 89</p>
+            </div>
+        </div>
+        
+        <!-- PAGE 5: CONTACT -->
+        <div id="contact" class="page">
+            <h2>Nous contacter</h2>
+            
+            <p>N'hésitez pas à nous contacter pour toute information complémentaire sur notre journée portes ouvertes ou sur notre établissement.</p>
+            
+            <div class="contact-box">
+                <h3>Adresse</h3>
+                <p>
+                    Lycée Excellence<br>
+                    123 Avenue de l'Éducation<br>
+                    75000 Paris<br>
+                    France
+                </p>
+            </div>
+            
+            <div class="contact-box">
+                <h3>Téléphone</h3>
+                <p>
+                    Standard : 01 23 45 67 89<br>
+                    Inscriptions : 01 23 45 67 90<br>
+                    Fax : 01 23 45 67 91
+                </p>
+            </div>
+            
+            <div class="contact-box">
+                <h3>Email</h3>
+                <p>
+                    contact@lycee-excellence.fr<br>
+                    inscription@lycee-excellence.fr<br>
+                    direction@lycee-excellence.fr
+                </p>
+            </div>
+            
+            <div class="contact-box">
+                <h3>Horaires</h3>
+                <p>
+                    Lundi - Vendredi<br>
+                    8h00 - 18h00<br><br>
+                    Samedi<br>
+                    9h00 - 12h00
+                </p>
+            </div>
+            
+            <div class="clearfix"></div>
+            
+            <div style="background-color: #f5f5f5; padding: 30px; margin-top: 30px; border: 2px solid #ddd;">
+                <h3>Plan d'accès</h3>
+                <div style="background-color: #ddd; height: 300px; display: flex; align-items: center; justify-content: center; border: 1px solid #ccc;">
+                    <p style="color: #888; font-size: 18px;">[Carte Google Maps]</p>
+                </div>
+                <p style="margin-top: 20px;"><strong>Transports en commun :</strong> Métro ligne 4, station École - Bus 21, 47, 63</p>
+                <p><strong>Parking :</strong> Parking gratuit disponible pour les visiteurs (100 places)</p>
+            </div>
+            
+            <div class="info-box" style="margin-top: 30px;">
+                <h3>Réseaux sociaux</h3>
+                <p>Suivez-nous sur Facebook, Twitter et Instagram pour rester informé de nos actualités et événements : @lycee.excellence</p>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <p>&copy; 2025 Lycée Excellence - Tous droits réservés</p>
+        <p>Mentions légales | Politique de confidentialité | Plan du site</p>
+        <p>Développé par l'équipe informatique de l'établissement</p>
+    </footer>
+    
+    <script>
+        function showPage(pageId) {
+            var pages = document.getElementsByClassName('page');
+            for (var i = 0; i < pages.length; i++) {
+                pages[i].classList.remove('active');
+            }
+            document.getElementById(pageId).classList.add('active');
+            window.scrollTo(0, 0);
+        }
+    </script>
+</body>
+</html>
